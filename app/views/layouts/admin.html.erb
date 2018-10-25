@@ -1,0 +1,16 @@
+<!-- app/views/layouts/admin.html.erb -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+ <title>AmirTourRadio</title>
+  <%= csrf_meta_tags %>
+
+  <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+<%= yield %>
+</body>
+</html>
