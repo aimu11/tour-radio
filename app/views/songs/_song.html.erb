@@ -1,5 +1,7 @@
 <!-- app/views/songs/_song.html.erb -->
 <div>
   <p><strong><%= song.title %></strong> by <%= song.singer %></p>
+    <%= link_to 'Listen', song.track.url(public: true) %> <!-- add this line -->
+
 </div>
 <hr>
