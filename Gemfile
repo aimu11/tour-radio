@@ -7,6 +7,8 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
+gem 'ruby-shout', '~> 2.2', '>= 2.2.1'
+gem 'sidekiq'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
