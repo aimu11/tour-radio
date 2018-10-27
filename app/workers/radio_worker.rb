@@ -2,6 +2,7 @@
 
 require 'shout'
 require 'open-uri'
+
 class RadioWorker
   include Sidekiq::Worker
   def perform(*_args)
@@ -14,7 +15,7 @@ class RadioWorker
     s.user = ENV['ICECAST_USER'] # credentials
     s.pass = ENV['ICECAST_PASSWORD']
     s.format = Shout::MP3 # format is MP3
-    s.description = 'Geek Radio' # an arbitrary name
+    s.description = 'Amir Radio' # an arbitrary name
     s.connect
 
     loop do # endless loop to peform streaming
@@ -27,7 +28,7 @@ class RadioWorker
 
         open(song.track.url(public: true)) do |file| # open the public URL
           m = ShoutMetadata.new # add metadata
-          m.add 'filename', song.track.original_filename
+          # m.add 'filename', song.track.original_filename
           m.add 'title', song.title
           m.add 'artist', song.singer
           s.metadata = m
