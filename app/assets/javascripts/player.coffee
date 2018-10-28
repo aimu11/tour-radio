@@ -24,5 +24,4 @@ $ ->
     error: (e) -> console.error(e)
 
 
-  player.get(0).play()
   setInterval updateMetaData, 5000
